@@ -1,5 +1,7 @@
 Changelog for executioner.
 
+- Replace deprecated modX->getMicrotime() calls with microtime(true)
+
 executioner 1.0.0-beta (October 1, 2010)
 ====================================
 - Initial release.

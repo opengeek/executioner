@@ -10,7 +10,7 @@
 $output = '';
 $tElementClass = !empty($tElementClass) ? $tElementClass : 'modSnippet';
 
-$tStart = $modx->getMicroTime();
+$tStart = microtime(true);
 if (!empty($tElement)) {
     switch ($tElementClass) {
         case 'modChunk':
@@ -30,7 +30,7 @@ if (!empty($tElement)) {
             break;
     }
 }
-$tEnd = $modx->getMicroTime();
+$tEnd = microtime(true);
 
 $modx->log(modX::LOG_LEVEL_ERROR, "{$tElementClass}: {$tElement} executed in " . sprintf("%2.4f s", $tEnd - $tStart));
 
