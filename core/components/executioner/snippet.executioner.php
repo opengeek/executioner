@@ -33,5 +33,6 @@ if (!empty($tElement)) {
 $tEnd = microtime(true);
 
 $modx->log(modX::LOG_LEVEL_ERROR, "{$tElementClass}: {$tElement} executed in " . sprintf("%2.4f s", $tEnd - $tStart));
+$modx->log(modX::LOG_LEVEL_INFO, "{$tElementClass}: {$tElement} executed with properties: " . print_r($scriptProperties, true));
 
 return $output;

@@ -1,5 +1,6 @@
 Changelog for executioner.
 
+- Log properties used for the Element processing at LOG_LEVEL_INFO
 - Replace deprecated modX->getMicrotime() calls with microtime(true)
 
 executioner 1.0.0-beta (October 1, 2010)
