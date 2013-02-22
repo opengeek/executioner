@@ -1,5 +1,7 @@
 Changelog for executioner.
 
+executioner 1.0.0-pl (February 22, 2013)
+====================================
 - Switch to using modX->parser->getElement() method
 - Log properties used for the Element processing at LOG_LEVEL_INFO
 - Replace deprecated modX->getMicrotime() calls with microtime(true)

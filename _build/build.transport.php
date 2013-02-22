@@ -23,7 +23,7 @@ $modx->setLogTarget(XPDO_CLI_MODE ? 'ECHO' : 'HTML');
 /* set package info */
 define('PKG_NAME', 'executioner');
 define('PKG_VERSION', '1.0.0');
-define('PKG_RELEASE', 'beta');
+define('PKG_RELEASE', 'pl');
 
 /* load builder */
 $modx->loadClass('transport.modPackageBuilder','',false, true);
