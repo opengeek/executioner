@@ -1,0 +1,48 @@
+# The Executioner
+
+This is the Executioner, a Snippet for MODX 2+ that captures and logs data about the processing of a MODX Element.
+
+
+## Environment Requirements
+
+- MODX 2.0+
+
+
+## Installation
+
+Install via Package Management from within the MODX Manager.
+
+
+## Usage
+
+Here is a sample getResources call:
+
+```
+[[!getResources?
+    &parents=`4`
+    &where=`{"template:IN":[1,2,3]}`
+    &sortbyTV=`eventDate`
+    &sortdirTV=`ASC`
+    &sortby=``
+    &tpl=`getResourcesTpl`
+]]
+```
+
+You can wrap this with The Executioner by changing the tag to:
+
+```
+[[!Executioner?
+    &tElement=`getResources`
+    &parents=`4`
+    &where=`{"template:IN":[1,2,3]}`
+    &sortbyTV=`eventDate`
+    &sortdirTV=`ASC`
+    &sortby=``
+    &tpl=`getResourcesTpl`
+]]
+```
+
+This will log the execution time of the wrapped Element to the MODX error.log, e.g.
+
+    [2010-10-01 13:06:21] (ERROR @ /revo-master/index.php) modSnippet: getResources executed in 0.0524 s
+
