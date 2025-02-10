@@ -13,7 +13,7 @@ $tElementClass = !empty($tElementClass) ? $tElementClass : 'modSnippet';
 $tStart = microtime(true);
 if (!empty($tElement)) {
     $tElementObj = $modx->parser->getElement($tElementClass, $tElement);
-    if ($tElementObj && $tElementObj instanceof modElement) {
+    if ($tElementObj && ($tElementObj instanceof modElement || $tElementObj instanceof \MODX\Revolution\modElement)) {
         $tElementObj->setCacheable(false);
         $output = $tElementObj->process($scriptProperties);
     } else {
